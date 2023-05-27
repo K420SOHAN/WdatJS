@@ -1,4 +1,4 @@
-// ggggggggggggggggggggggg
+
 const wSWordObect = {
     A:['অ','য়'],
     Aa:['আ','য়া',"আঃ","অ্যা","অ্যাঁ"],
