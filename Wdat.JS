@@ -781,50 +781,75 @@ function wStrtoQus(lang,x){
         
     };return f;};
     
+    
     const webLang =(Lang,textType)=>{
+        
         let lang = Lang.toLowerCase();
-        var arr = ['.wHome','.wLogOut','.wLogin','.wSignIn','.wMenu'];
-        function insert(data,setData){
-            if(textType =="A"){
-                var h = document.body.innerHTML.replaceAll(data,setData.toUpperCase());
-            }else if(textType == "a"){
-                var h = document.body.innerHTML.replaceAll(data,setData.toLowerCase());
-            }else{
-                var h = document.body.innerHTML.replaceAll(data,setData);
-            }
-            document.body.innerHTML =h;
-        }
-        if(lang =='en'){
-            insert('wAbout','About');
-            insert('wBlog','Blog');
-            insert('wContact','Contact');
-            insert('wEnglish','English');
-            insert('wHome','Home');
-            insert('wMenu','Menu');
-            insert('wShop','Shop');
-            insert('wStatus','Status');
+        var Class = ['.wHome','.wLogOut','.wLogin','.wSignIn','.wMenu'];
+        const f ={
+            useKey:()=>{
+                function insert(data,setData){
             
+                    if(textType =="A"){
+                        var h = document.body.innerHTML.replaceAll(data,setData.toUpperCase());
+                    }else if(textType == "a"){
+                        var h = document.body.innerHTML.replaceAll(data,setData.toLowerCase());
+                    }else{
+                        var h = document.body.innerHTML.replaceAll(data,setData);
+                    }
+                    
+                    document.body.innerHTML =h;
+                }
+                if(lang =='en'){
+                    insert('wAbout','About');
+                    insert('wBlog','Blog');
+                    insert('wContact','Contact');
+                    insert('wEnglish','English');
+                    insert('wHome','Home');
+                    insert('wMenu','Menu');
+                    insert('wShop','Shop');
+                    insert('wStatus','Status');
+                    
+                }
+                if(lang =='bn'){
+                    insert('wAbout','সম্পর্কে');
+                    insert('wBlog','ব্লগ');
+                    insert('wContact','কন্টাক্ট');
+                    insert('wEnglish','ইংরেজি');
+                    insert('wHome','হোম');
+                    insert('wMenu','মেনু');
+                    insert('wShop','শপ');
+                    insert('wStatus','স্ট্যাটাস');
+                }
+                if(lang =='purebn' || lang =='pbn'){
+                    insert('wAbout','সম্পর্কে');
+                    insert('wBlog','ব্লগ');
+                    insert('wContact','যোগাযোগ');
+                    insert('wEnglish','ইংরেজি');
+                    insert('wHome','বাড়ি');
+                    insert('wMenu','তালিকা');
+                    insert('wShop','দোকান');
+                    insert('wStatus','স্ট্যাটাস');
+                }
+
+            },
+            useClass:()=>{
+               
+                    
+                if(Lang == 'en'){
+                    w('.wHome').html('Home');
+                    w('.wLogin').html('Login');
+                }
+                if(Lang=='bn'){
+                    w('.wHome').html('হোম');
+                    w('.wLogin').html('Login');
+                }
+                
+                
+            },
         }
-        if(lang =='bn'){
-            insert('wAbout','সম্পর্কে');
-            insert('wBlog','ব্লগ');
-            insert('wContact','কন্টাক্ট');
-            insert('wEnglish','ইংরেজি');
-            insert('wHome','হোম');
-            insert('wMenu','মেনু');
-            insert('wShop','শপ');
-            insert('wStatus','স্ট্যাটাস');
-        }
-        if(lang =='purebn' || lang =='pbn'){
-            insert('wAbout','সম্পর্কে');
-            insert('wBlog','ব্লগ');
-            insert('wContact','যোগাযোগ');
-            insert('wEnglish','ইংরেজি');
-            insert('wHome','বাড়ি');
-            insert('wMenu','তালিকা');
-            insert('wShop','দোকান');
-            insert('wStatus','স্ট্যাটাস');
-        }
+        return f;
+        
       }
     wStart('body');
 

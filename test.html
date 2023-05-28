@@ -11,12 +11,15 @@
     <input value="wHome" type="text" name="" id="">
     <h1 class="wLogin">wHome</h1>
     <h1 lang="en"  class="wLogin"><p></p></h1>
-    <h1 lang="en" id="list" class="wHome"><p></p></h1>
+    <h1 lang="en" id="list" class="wHome"></h1>
+    <h1 lang="en" id="list" class="wHome"></h1>
+    <h1 lang="en" id="list" class="wHome"></h1>
     
     <div>
       <input id="English" type="button"  value="wEnglish"/> | <input id="Bangla" type="button"  value="Bangla"/>
     
     </div>
+    <button id="n">go</button>
     
     
     
@@ -37,12 +40,26 @@
       
       
       wStart().run((e)=>{
-        webLang('bn');
+        
+        var lang = wLocalS.get('lang');
+        webLang(lang).useClass();
         w("#English").on('click',()=>{
-          wAl('en');
+          
+          wLocalS.set('lang','en');
+          var lang = wLocalS.get('lang');
+          webLang('en').useClass();
+          // wOpen(e.pathname);
+
         })
         w("#Bangla").on('click',()=>{
-          wAl('bn');
+          
+          wLocalS.set('lang','bn');
+          var lang = wLocalS.get('lang');
+          webLang('bn').useClass();
+          // wOpen(e.pathname);
+          })
+          w('#n').click(()=>{
+            wcolog('body')
           })
       })
       
