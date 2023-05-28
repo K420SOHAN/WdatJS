@@ -792,6 +792,7 @@ function wStrtoQus(lang,x){
             insert('wAbout','About');
             insert('wBlog','Blog');
             insert('wContact','Contact');
+            insert('wEnglish','English');
             insert('wHome','Home');
             insert('wMenu','Menu');
             insert('wShop','Shop');
@@ -802,6 +803,7 @@ function wStrtoQus(lang,x){
             insert('wAbout','সম্পর্কে');
             insert('wBlog','ব্লগ');
             insert('wContact','কন্টাক্ট');
+            insert('wEnglish','ইংরেজি');
             insert('wHome','হোম');
             insert('wMenu','মেনু');
             insert('wShop','শপ');
@@ -811,6 +813,7 @@ function wStrtoQus(lang,x){
             insert('wAbout','সম্পর্কে');
             insert('wBlog','ব্লগ');
             insert('wContact','যোগাযোগ');
+            insert('wEnglish','ইংরেজি');
             insert('wHome','বাড়ি');
             insert('wMenu','তালিকা');
             insert('wShop','দোকান');
