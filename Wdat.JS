@@ -785,7 +785,7 @@ function wStrtoQus(lang,x){
     const webLang =(Lang,textType)=>{
         
         let lang = Lang.toLowerCase();
-        var keyArr = ['wAbout','wBlog','wContact','wEnglish','wHome'];
+        var keyArr = ['wAbout','wBlog','wContact','wEnglish','wHome','wMenu','wShop','wStatus'];
         let langObj={
             wAbout:{en:'About',bn:'সম্পর্কে'},
             wBlog:{en:'Blog',bn:'ব্লগ'},
@@ -794,6 +794,7 @@ function wStrtoQus(lang,x){
             wHome:{en:'Home',bn:'হোম'},
             wMenu:{en:'Menu',bn:'মেনু'},
             wShop:{en:'Shop',bn:'শপ'},
+            wStatus:{en:'Status',bn:'স্ট্যাটাস'},
             
             
 
