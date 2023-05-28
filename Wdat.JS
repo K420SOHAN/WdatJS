@@ -774,6 +774,7 @@ function wStrtoQus(lang,x){
         
         
     };return f;};
+    
     const webLang =(Lang,textType)=>{
         let lang = Lang.toLowerCase();
         var arr = ['.wHome','.wLogOut','.wLogin','.wSignIn','.wMenu'];
@@ -788,20 +789,32 @@ function wStrtoQus(lang,x){
             document.body.innerHTML =h;
         }
         if(lang =='en'){
-            
+            insert('wAbout','About');
+            insert('wBlog','Blog');
+            insert('wContact','Contact');
             insert('wHome','Home');
             insert('wMenu','Menu');
-            insert('wAbout','About');
+            insert('wShop','Shop');
+            insert('wStatus','Status');
+            
         }
         if(lang =='bn'){
+            insert('wAbout','সম্পর্কে');
+            insert('wBlog','ব্লগ');
+            insert('wContact','কন্টাক্ট');
             insert('wHome','হোম');
             insert('wMenu','মেনু');
-            insert('wAbout','সম্পর্কে');
+            insert('wShop','শপ');
+            insert('wStatus','স্ট্যাটাস');
         }
         if(lang =='purebn' || lang =='pbn'){
+            insert('wAbout','সম্পর্কে');
+            insert('wBlog','ব্লগ');
+            insert('wContact','যোগাযোগ');
             insert('wHome','বাড়ি');
             insert('wMenu','তালিকা');
-            insert('wAbout','সম্পর্কে');
+            insert('wShop','দোকান');
+            insert('wStatus','স্ট্যাটাস');
         }
       }
     wStart('body');
