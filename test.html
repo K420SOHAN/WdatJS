@@ -13,8 +13,10 @@
     <h1 lang="en"  class="wLogin"><p></p></h1>
     <h1 lang="en" id="list" class="wHome"><p></p></h1>
     
-    <input id="English" type="button"  value="wEnglish"/> | <input id="Bangla" type="button"  value="Bangla"/>
-    <p id="myLang"></p>
+    <div>
+      <input id="English" type="button"  value="wEnglish"/> | <input id="Bangla" type="button"  value="Bangla"/>
+    
+    </div>
     
     
     
@@ -31,16 +33,19 @@
     
 
     <script>
+     
       
-      // document.addEventListener("DOMContentLoaded", () => {
+      
       wStart().run((e)=>{
         webLang('bn');
-        console.log(document.querySelector('#data').style);
-        w('#data').on('click',()=>{
-            
+        w("#English").on('click',()=>{
+          wAl('en');
+        })
+        w("#Bangla").on('click',()=>{
+          wAl('bn');
           })
       })
-      // })
+      
       
      
     </script>

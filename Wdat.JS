@@ -381,7 +381,10 @@ const wSearch = (data)=>{
     return method;
 }
 function wAction(Id,LEventListener,Fun){document.querySelector(Id).addEventListener(LEventListener,Fun);};
-function wAl(x){window.alert(x)};
+function wAl(x){
+    window.alert(x);
+   
+};
 function wVal(x){return document.querySelector(x).value;};
 function wCoLog(x){console.log(x)};
 function wcolog(x){console.log(x)};
@@ -769,7 +772,10 @@ function wStrtoQus(lang,x){
 };
     let f={
         run:(fun)=>{
-        fun(obj);
+            document.addEventListener("DOMContentLoaded", () => {
+                fun(obj);
+                })
+        
         },
         
         
