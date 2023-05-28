@@ -783,8 +783,12 @@ function wStrtoQus(lang,x){
     
     
     const webLang =(Lang,textType)=>{
+        if(Lang == null){
+            var lang ='en';
+        }else{
+            var lang = Lang.toLowerCase();
+        }
         
-        let lang = Lang.toLowerCase();
         var keyArr = ['wAbout','wBlog','wContact','wEnglish','wHome','wMenu','wShop','wStatus'];
         let langObj={
             wAbout:{en:'About',bn:'সম্পর্কে'},
@@ -820,6 +824,7 @@ function wStrtoQus(lang,x){
                         document.body.innerHTML =h;
                     }
                     if(lang == 'bn'){
+                        wcolog('bn run');
                         var h = document.body.innerHTML.replaceAll(data,wObject(langObj).key(data).bn);
                     document.body.innerHTML =h;
                     }
