@@ -785,13 +785,15 @@ function wStrtoQus(lang,x){
     const webLang =(Lang,textType)=>{
         
         let lang = Lang.toLowerCase();
-        var Class = ['.wHome','.wLogOut','.wLogin','.wSignIn','.wMenu'];
+        var keyArr = ['wAbout','wBlog','wContact','wEnglish','wHome'];
         let langObj={
             wAbout:{en:'About',bn:'সম্পর্কে'},
             wBlog:{en:'Blog',bn:'ব্লগ'},
             wContact:{en:'Contact',bn:'কন্টাক্ট'},
             wEnglish:{en:'English',bn:'ইংরেজি'},
             wHome:{en:'Home',bn:'হোম'},
+            wMenu:{en:'Menu',bn:'মেনু'},
+            wShop:{en:'Shop',bn:'শপ'},
             
             
 
@@ -810,7 +812,7 @@ function wStrtoQus(lang,x){
                         if(textType =="A"){
                             var h = document.body.innerHTML.replaceAll(data,wObject(langObj).key(data).en.toUpperCase());
                         }else if(textType == "a"){
-                            var h = document.body.innerHTML.replaceAll(data,setDawObject(langObj).key(data).en.toLowerCase());
+                            var h = document.body.innerHTML.replaceAll(data,wObject(langObj).key(data).en.toLowerCase());
                         }else{
                             var h = document.body.innerHTML.replaceAll(data,wObject(langObj).key(data).en);
                         }
@@ -823,12 +825,14 @@ function wStrtoQus(lang,x){
                     
                     
                 }
-                
-                    insert('wAbout');
-                    insert('wBlog');
-                    insert('wContact');
-                    insert('wEnglish');
-                    insert('wHome');
+                   for(i=0;i<keyArr.length;i++){
+                    insert(keyArr[i]);
+                   }
+                    // insert('wAbout');
+                    // insert('wBlog');
+                    // insert('wContact');
+                    // insert('wEnglish');
+                    // insert('wHome');
                     // insert('wMenu','Menu');
                     // insert('wShop','Shop');
                     // insert('wStatus','Status');
@@ -857,8 +861,10 @@ function wStrtoQus(lang,x){
 
             },
             useClass:()=>{
-               
-                    setLang('wHome');
+                for(i=0;i<keyArr.length;i++){
+                    setLang(keyArr[i]);
+                   }
+                    
               
                 
             },
