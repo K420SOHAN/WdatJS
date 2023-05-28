@@ -786,65 +786,80 @@ function wStrtoQus(lang,x){
         
         let lang = Lang.toLowerCase();
         var Class = ['.wHome','.wLogOut','.wLogin','.wSignIn','.wMenu'];
+        let langObj={
+            wAbout:{en:'About',bn:'সম্পর্কে'},
+            wBlog:{en:'Blog',bn:'ব্লগ'},
+            wContact:{en:'Contact',bn:'কন্টাক্ট'},
+            wEnglish:{en:'English',bn:'ইংরেজি'},
+            wHome:{en:'Home',bn:'হোম'},
+            
+            
+
+        }
+        const setLang = (key)=>{
+            let mekeClass = '.'+key;
+            if(lang == 'en'){w(mekeClass).val(wObject(langObj).key(key).en);}
+            if(lang=='bn'){w(mekeClass).val(wObject(langObj).key(key).bn);}
+}
         const f ={
             useKey:()=>{
-                function insert(data,setData){
+                function insert(data){
             
-                    if(textType =="A"){
-                        var h = document.body.innerHTML.replaceAll(data,setData.toUpperCase());
-                    }else if(textType == "a"){
-                        var h = document.body.innerHTML.replaceAll(data,setData.toLowerCase());
-                    }else{
-                        var h = document.body.innerHTML.replaceAll(data,setData);
+                    
+                    if(lang == 'en'){
+                        if(textType =="A"){
+                            var h = document.body.innerHTML.replaceAll(data,wObject(langObj).key(data).en.toUpperCase());
+                        }else if(textType == "a"){
+                            var h = document.body.innerHTML.replaceAll(data,setDawObject(langObj).key(data).en.toLowerCase());
+                        }else{
+                            var h = document.body.innerHTML.replaceAll(data,wObject(langObj).key(data).en);
+                        }
+                        document.body.innerHTML =h;
+                    }
+                    if(lang == 'bn'){
+                        var h = document.body.innerHTML.replaceAll(data,wObject(langObj).key(data).bn);
+                    document.body.innerHTML =h;
                     }
                     
-                    document.body.innerHTML =h;
-                }
-                if(lang =='en'){
-                    insert('wAbout','About');
-                    insert('wBlog','Blog');
-                    insert('wContact','Contact');
-                    insert('wEnglish','English');
-                    insert('wHome','Home');
-                    insert('wMenu','Menu');
-                    insert('wShop','Shop');
-                    insert('wStatus','Status');
                     
                 }
-                if(lang =='bn'){
-                    insert('wAbout','সম্পর্কে');
-                    insert('wBlog','ব্লগ');
-                    insert('wContact','কন্টাক্ট');
-                    insert('wEnglish','ইংরেজি');
-                    insert('wHome','হোম');
-                    insert('wMenu','মেনু');
-                    insert('wShop','শপ');
-                    insert('wStatus','স্ট্যাটাস');
-                }
-                if(lang =='purebn' || lang =='pbn'){
-                    insert('wAbout','সম্পর্কে');
-                    insert('wBlog','ব্লগ');
-                    insert('wContact','যোগাযোগ');
-                    insert('wEnglish','ইংরেজি');
-                    insert('wHome','বাড়ি');
-                    insert('wMenu','তালিকা');
-                    insert('wShop','দোকান');
-                    insert('wStatus','স্ট্যাটাস');
-                }
+                
+                    insert('wAbout');
+                    insert('wBlog');
+                    insert('wContact');
+                    insert('wEnglish');
+                    insert('wHome');
+                    // insert('wMenu','Menu');
+                    // insert('wShop','Shop');
+                    // insert('wStatus','Status');
+                    
+                
+                // if(lang =='bn'){
+                //     insert('wAbout','সম্পর্কে');
+                //     insert('wBlog','ব্লগ');
+                //     insert('wContact','কন্টাক্ট');
+                //     insert('wEnglish','ইংরেজি');
+                //     insert('wHome','হোম');
+                //     // insert('wMenu','মেনু');
+                //     // insert('wShop','শপ');
+                //     // insert('wStatus','স্ট্যাটাস');
+                // }
+                // if(lang =='purebn' || lang =='pbn'){
+                //     insert('wAbout','সম্পর্কে');
+                //     insert('wBlog','ব্লগ');
+                //     insert('wContact','যোগাযোগ');
+                //     insert('wEnglish','ইংরেজি');
+                //     insert('wHome','বাড়ি');
+                //     insert('wMenu','তালিকা');
+                //     insert('wShop','দোকান');
+                //     insert('wStatus','স্ট্যাটাস');
+                // }
 
             },
             useClass:()=>{
                
-                    
-                if(Lang == 'en'){
-                    w('.wHome').html('Home');
-                    w('.wLogin').html('Login');
-                }
-                if(Lang=='bn'){
-                    w('.wHome').html('হোম');
-                    w('.wLogin').html('Login');
-                }
-                
+                    setLang('wHome');
+              
                 
             },
         }

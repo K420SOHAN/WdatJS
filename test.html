@@ -8,7 +8,7 @@
   </head>
   <body id="Body">
     
-    <input value="wHome" type="text" name="" id="">
+    <input class="wHome" value="wHome" type="text" name="" id="">
     <h1 class="wLogin">wHome</h1>
     <h1 lang="en"  class="wLogin"><p></p></h1>
     <h1 lang="en" id="list" class="wHome"></h1>
@@ -42,21 +42,22 @@
       wStart().run((e)=>{
         
         var lang = wLocalS.get('lang');
-        webLang(lang).useClass();
+        webLang(lang).useKey();
+        
         w("#English").on('click',()=>{
           
           wLocalS.set('lang','en');
-          var lang = wLocalS.get('lang');
-          webLang('en').useClass();
-          // wOpen(e.pathname);
+          // var lang = wLocalS.get('lang');
+          // webLang('en').useClass();
+          wOpen(e.pathname);
 
         })
         w("#Bangla").on('click',()=>{
           
           wLocalS.set('lang','bn');
-          var lang = wLocalS.get('lang');
-          webLang('bn').useClass();
-          // wOpen(e.pathname);
+          // var lang = wLocalS.get('lang');
+          // webLang('bn').useClass();
+          wOpen(e.pathname);
           })
           w('#n').click(()=>{
             wcolog('body')
