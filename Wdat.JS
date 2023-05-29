@@ -313,8 +313,13 @@ const wObject = (obj)=>{
     let Pr ={
         obj:obj,
         key:(fild)=>{
-            const aalue = Object.getOwnPropertyDescriptor(obj, fild).value;
-           return aalue;
+            
+            const aalue = Object.getOwnPropertyDescriptor(obj, fild)?.value;
+            if(Object.getOwnPropertyDescriptor(obj, fild)?.value){
+                
+                return aalue;
+            }else{return 'Undefined Your Object Key'}
+           
         }
     }
   return Pr; 
