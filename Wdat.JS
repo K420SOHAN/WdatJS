@@ -302,12 +302,14 @@ const w = function(id){
 
 
 
-const wArray =(arr)=>{
-    let arrF ={
-        Array:arr,
-
-    }
-    return arrF;
+const wArray = (arr)=>{
+    let f={
+        removeItem:(value)=>{
+            var Result = arr.filter(item => item !== value)
+            return Result;
+        }
+    };
+    return f;
 }
 const wObject = (obj)=>{
     let Pr ={
@@ -804,9 +806,6 @@ function wStrtoQus(lang,x){
             wMenu:{en:'Menu',bn:'মেনু'},
             wShop:{en:'Shop',bn:'শপ'},
             wStatus:{en:'Status',bn:'স্ট্যাটাস'},
-            
-            
-
         }
         const setLang = (key)=>{
             let mekeClass = '.'+key;
