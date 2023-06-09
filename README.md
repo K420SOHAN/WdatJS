@@ -1,5 +1,11 @@
 # WdatJS 
+---------------
+# --- npm Install Command ---
+`$ npm i wdatjs`
 # ------------------------
-# !!! -- All Function -- !!!
-webLang('en') - All Key Word List 
-wHome
+# !!! -- All Method List -- !!!
+# ----------------------------
+# -- 1| Number() => All Property --
+# ---------------
+1 | rand() ;
+2 | limit() ;

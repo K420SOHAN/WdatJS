@@ -12,3 +12,5 @@ node_modules
 !Wdat.JS
 .npmignore
 app.js
+package-lock.json
+package.json
