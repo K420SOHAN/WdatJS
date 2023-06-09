@@ -1,0 +1,11 @@
+test.html
+.vscode/
+*.html
+index.html
+.vscode/settings.json
+func.html
+*.js
+*.json
+!index.js
+Logo/
+node_modules/
