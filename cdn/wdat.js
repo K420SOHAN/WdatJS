@@ -316,12 +316,8 @@ const wObject = (obj)=>{
         obj:obj,
         key:(fild)=>{
             
-            const aalue = Object.getOwnPropertyDescriptor(obj, fild)?.value;
-            if(Object.getOwnPropertyDescriptor(obj, fild)?.value){
-                
-                return aalue;
-            }else{return 'Undefined Your Object Key'}
-           
+            let result = langObj?.[key];
+        return result?.[lang];
         }
     }
   return Pr; 
@@ -388,10 +384,7 @@ const wSearch = (data)=>{
     return method;
 }
 function wAction(Id,LEventListener,Fun){document.querySelector(Id).addEventListener(LEventListener,Fun);};
-function wAl(x){
-    window.alert(x);
-   
-};
+function wAl(x){window.alert(x);};
 function wVal(x){return document.querySelector(x).value;};
 function wCoLog(x){console.log(x)};
 function wcolog(x){console.log(x)};
