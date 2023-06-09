@@ -11,3 +11,4 @@ node_modules
 !index.js
 !Wdat.JS
 .npmignore
+app.js
