@@ -5,7 +5,9 @@
 # ------------------------
 # !!! -- All Method List -- !!!
 # ----------------------------
-# -- 1| Number() => All Property --
+#### -- 1| Number() => All Property --
 # ---------------
--1 | rand() ;
--2 | limit() ;
+1. rand()
+2. limit()
+
+                
