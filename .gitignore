@@ -10,3 +10,4 @@ node_modules
 *.js
 !index.js
 !Wdat.JS
+.npmignore
