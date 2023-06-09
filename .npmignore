@@ -4,8 +4,9 @@ test.html
 index.html
 .vscode/settings.json
 func.html
+node_modules
+.npmignore
+.gitignore
 *.js
-*.json
 !index.js
-Logo/
-node_modules/
+!Wdat.JS

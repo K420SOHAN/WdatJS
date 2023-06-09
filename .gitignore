@@ -1,8 +1,12 @@
 test.html
 .vscode/
-.html
+*.html
 index.html
 .vscode/settings.json
 func.html
 node_modules
 .npmignore
+.gitignore
+*.js
+!index.js
+!Wdat.JS
