@@ -1,4 +1,44 @@
 var xv = 255;
+const Array = (arr)=>{
+  let length =arr.length;
+  let f={
+    length,
+    len:length,
+      removeItem:(value)=>{
+          var Result = arr.filter(item => item !== value)
+          return Result;
+      },
+      fast:()=>{
+        return arr[0];
+      },
+      last:()=>{
+        return arr[arr.length-1];
+      },
+      remove:()=>{
+        return arr=[];
+      },
+      removeDup:()=>{
+        let names = arr;let dup = [...new Set(names)];return dup;
+      },
+      index:(id)=>{
+        return arr[id];
+      }
+  };
+  return f;
+}
+//  Array Function End
+const Object = (obj)=>{
+  let Pr ={
+      obj:obj,
+      key:(fild)=>{
+          
+          return obj?.[fild];
+         
+      }
+  }
+return Pr; 
+}
+//  Object Function End
 
 const Number =(x)=>{
   let f={
@@ -25,5 +65,27 @@ const Number =(x)=>{
   return f;
 
 }
+// Number Function End
+const AppLang =(Lang)=>{
+  let lang= Lang.toLowerCase();
+  let langObj={
+    wAbout:{en:'About',bn:'সম্পর্কে'},
+    wBlog:{en:'Blog',bn:'ব্লগ'},
+    wContact:{en:'Contact',bn:'কন্টাক্ট'},
+    wEnglish:{en:'English',bn:'ইংরেজি'},
+    wHome:{en:'Home',bn:'হোম'},
+    wMenu:{en:'Menu',bn:'মেনু'},
+    wShop:{en:'Shop',bn:'শপ'},
+    wStatus:{en:'Status',bn:'স্ট্যাটাস'},
+}
+  
+    let f ={
+      key:(key)=>{
+        let result = langObj?.[key];
+        return result?.[lang];
+      }
+    };
+    return f;
+}
 
-module.exports = {Number};
+module.exports = {Array,AppLang,Number};
