@@ -316,8 +316,8 @@ const wObject = (obj)=>{
         obj:obj,
         key:(fild)=>{
             
-            let result = langObj?.[key];
-        return result?.[lang];
+            let result = obj?.[fild];
+        return result;
         }
     }
   return Pr; 
@@ -789,21 +789,22 @@ function wStrtoQus(lang,x){
             var lang = Lang.toLowerCase();
         }
         
-        var keyArr = ['wAbout','wBlog','wContact','wEnglish','wHome','wMenu','wShop','wStatus'];
-        let langObj={
-            wAbout:{en:'About',bn:'সম্পর্কে'},
-            wBlog:{en:'Blog',bn:'ব্লগ'},
-            wContact:{en:'Contact',bn:'কন্টাক্ট'},
-            wEnglish:{en:'English',bn:'ইংরেজি'},
-            wHome:{en:'Home',bn:'হোম'},
-            wMenu:{en:'Menu',bn:'মেনু'},
-            wShop:{en:'Shop',bn:'শপ'},
-            wStatus:{en:'Status',bn:'স্ট্যাটাস'},
-        }
+        var keyArr=["wSubscribe","wShop","wVideos","wDislike","wLive","wShorts","wContact","wHome","wSave","wBlog","wForm","wImage","wStatus","wPlaylists","wHistory","wLogin","wSettings","wAbout","wLibrary","wReport","wMusic","wEnglish","wTest","wHelp","wLike","wPost","wSubmit","wSearch","wDelete"]; 
+        let lanStringObg = {"wPlaylists":{"en":"Playlists","bn":" প্লেলিস্ট"},"wHome":{"en":"Home","bn":"হোম"},"wContact":{"bn":" কন্টাক্ট","en":"Contact"},"wVideos":{"en":"Videos","bn":" ভিডিও"},"wImage":{"en":"Image","bn":" ছবি"},"wSearch":{"en":"Search","bn":" অনুসন্ধান"},"wDelete":{"en":"Delete","bn":" মুছে ফেলুন"},"wDislike":{"en":"Dislike","bn":" অপছন্দ"},"wPost":{"en":"Post","bn":" পোস্ট"},"wSettings":{"bn":" সেটিংস","en":"Settings"},"wEnglish":{"bn":" ইংরেজি","en":"English"},"wLibrary":{"bn":" লাইব্রেরি","en":"Library"},"wSave":{"bn":" সংরক্ষণ","en":"Save"},"wShorts":{"bn":" শর্টস","en":"Shorts"},"wLive":{"bn":" লাইভ","en":"Live"},"wLike":{"en":"Like","bn":" পছন্দ"},"wShop":{"bn":" শপ","en":"Shop"},"wSubscribe":{"en":"Subscribe","bn":" সাবস্ক্রাইব"},"wTest":{"bn":"Test","en":"Test"},"wStatus":{"en":"Status","bn":" স্ট্যাটাস"},"wSubmit":{"bn":" জমা","en":"Submit"},"wForm":{"en":"Form","bn":"ফর্ম"},"wMusic":{"en":"Music","bn":" সঙ্গীত"},"wBlog":{"en":"Blog","bn":" ব্লগ"},"wHelp":{"en":"Help","bn":" সাহায্য"},"wAbout":{"bn":" সম্পর্কে","en":"About"},"wHistory":{"bn":" ইতিহাস","en":"History"},"wLogin":{"bn":" প্রবেশ করুন","en":"Login"},"wReport":{"bn":" অভিযোগ","en":"Report"}};
+        
+        
+        let langObj=lanStringObg;
         const setLang = (key)=>{
+            
             let mekeClass = '.'+key;
-            if(lang == 'en'){w(mekeClass).val(wObject(langObj).key(key).en);}
-            if(lang=='bn'){w(mekeClass).val(wObject(langObj).key(key).bn);}
+            if(lang == 'en'){w(mekeClass).val(wObject(langObj).key(key)?.en);
+                wcolog(key);}
+            if(lang=='bn'){
+                
+                w(mekeClass).val(wObject(langObj).key(key)?.bn);
+                
+            }
+            
 }
         const f ={
             useKey:()=>{
@@ -878,5 +879,5 @@ function wStrtoQus(lang,x){
     wStart('body');
 
     w('.wTcenter').css({textAlign:'center'});
-    
+
     
