@@ -88,4 +88,4 @@ const AppLang =(Lang)=>{
     return f;
 }
 
-module.exports = {Array,AppLang,Number};
+module.exports = {Array,AppLang,Number,Object};

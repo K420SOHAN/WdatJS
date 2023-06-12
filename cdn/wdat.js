@@ -879,3 +879,4 @@ function wStrtoQus(lang,x){
 
     w('.wTcenter').css({textAlign:'center'});
     
+    

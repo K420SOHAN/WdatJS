@@ -4,7 +4,7 @@
 `$ npm i wdatjs`
 # ------------------------
 # --- wdatjs cdn link ---
-`https://www.unpkg.com/wdatjs@1.0.9/cdn/wdat.js`
+`https://unpkg.com/browse/wdatjs@1.1.0/cdn/wdat.js`
 # ------------------------
 # !!! -- All Method List -- !!!
 # ----------------------------
