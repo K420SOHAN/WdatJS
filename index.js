@@ -1,3 +1,4 @@
+var Obdata = require('./Obdata');
 var xv = 255;
 const Array = (arr)=>{
   let length =arr.length;
@@ -68,16 +69,7 @@ const Number =(x)=>{
 // Number Function End
 const AppLang =(Lang)=>{
   let lang= Lang.toLowerCase();
-  let langObj={
-    wAbout:{en:'About',bn:'সম্পর্কে'},
-    wBlog:{en:'Blog',bn:'ব্লগ'},
-    wContact:{en:'Contact',bn:'কন্টাক্ট'},
-    wEnglish:{en:'English',bn:'ইংরেজি'},
-    wHome:{en:'Home',bn:'হোম'},
-    wMenu:{en:'Menu',bn:'মেনু'},
-    wShop:{en:'Shop',bn:'শপ'},
-    wStatus:{en:'Status',bn:'স্ট্যাটাস'},
-}
+  let langObj=Obdata.langobj;
   
     let f ={
       key:(key)=>{
