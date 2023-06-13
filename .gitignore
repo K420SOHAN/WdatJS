@@ -9,6 +9,7 @@ node_modules
 .gitignore
 *.js
 !index.js
+!Obdata.js
 !Wdat.JS
 .npmignore
 app.js
