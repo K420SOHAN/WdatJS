@@ -780,8 +780,12 @@ function wStrtoQus(lang,x){
         
         
     };return f;};
+
     
-    
+    /** Lang Data Object start */
+    var lanStringObg = {"wStatus":{"en":"Status","bn":"স্ট্যাটাস"},"wData":{"bn":"ডেটা","en":"Data"},"wGo":{"en":"Go","bn":"যাও"},"wBlog":{"en":"Blog","bn":"ব্লগ"},"wPlaylists":{"bn":"প্লেলিস্ট","en":"Playlists"},"wClick":{"bn":"ক্লিক","en":"Click"},"wUpdate":{"bn":"আপডেট","en":"Update"},"wLike":{"en":"Like","bn":"পছন্দ"},"wHistory":{"en":"History","bn":"ইতিহাস"},"wHome":{"bn":"হোম","en":"Home"},"wSettings":{"bn":"সেটিংস","en":"Settings"},"wWarning":{"en":"Warning","bn":"সতর্কতা"},"wShop":{"en":"Shop","bn":"শপ"},"wSuccess":{"bn":"সফল","en":"Success"},"wSunday":{"en":"Sunday","bn":"রবিবার"},"wGame":{"bn":"গেম","en":"Game"},"wText":{"bn":"টেক্সট","en":"Text"},"wAddress":{"bn":"ঠিকানা","en":"Address"},"wWednesday":{"bn":"বুধবার","en":"Wednesday"},"wDownload":{"en":"Download","bn":"ডাউনলোড"},"wUpload":{"bn":"আপলোড","en":"Upload"},"wBkash":{"en":"Bkash","bn":"বিকাশ"},"wContact":{"en":"Contact","bn":"কন্টাক্ট"},"wAudio":{"en":"Audio","bn":"অডিও"},"wTuesday":{"bn":"মঙ্গলবার","en":"Tuesday"},"wSearch":{"en":"Search","bn":"অনুসন্ধান"},"wMonday":{"en":"Monday","bn":"সোমবার"},"wAbout":{"en":"About","bn":"সম্পর্কে"},"wMusic":{"en":"Music","bn":"সঙ্গীত"},"wSubscribe":{"en":"Subscribe","bn":" সাবস্ক্রাইব"},"wComputer":{"en":"Computer","bn":"কম্পিউটার"},"wTest":{"bn":"Test","en":"Test"},"wFriday":{"en":"Friday","bn":"শুক্রবার"},"wSave":{"en":"Save","bn":"সংরক্ষণ"},"wHelp":{"en":"Help","bn":"সাহায্য"},"wImage":{"bn":"ছবি","en":"Image"},"wLanguage":{"bn":"ভাষা","en":"Language"},"wLive":{"bn":"লাইভ","en":"Live"},"wNagad":{"bn":"নগদ","en":"Nagad"},"wDelete":{"bn":"মুছে ফেলুন","en":"Delete"},"wShorts":{"en":"Shorts","bn":"শর্টস"},"wForm":{"bn":"ফর্ম","en":"Form"},"wEnglish":{"en":"English","bn":"ইংরেজি"},"wThursday":{"en":"Thursday","bn":"বৃহস্পতিবার"},"wLogin":{"bn":"প্রবেশ করুন","en":"Login"},"wPost":{"bn":"পোস্ট","en":"Post"},"wInternet":{"bn":"ইন্টারনেট","en":"Internet"},"wDislike":{"en":"Dislike","bn":"অপছন্দ"},"wCalculator":{"en":"Calculator","bn":"ক্যালকুলেটর"},"wSend":{"en":"Send","bn":"পাঠান"},"wLocation":{"en":"Location","bn":"অবস্থান"},"wSaturday":{"en":"Saturday","bn":"শনিবার"},"wLibrary":{"en":"Library","bn":"লাইব্রেরি"},"wReport":{"en":"Report","bn":"অভিযোগ"},"wSubmit":{"bn":"জমা","en":"Submit"},"wVideos":{"en":"Videos","bn":"ভিডিও"}};
+        
+    /** Lang Data Object End */
     const webLang =(Lang,textType)=>{
         if(Lang == null){
             var lang ='en';
@@ -789,10 +793,7 @@ function wStrtoQus(lang,x){
             var lang = Lang.toLowerCase();
         }
         
-        var keyArr=["wWarning","wContact","wLibrary","wVideos","wShorts","wForm","wSubscribe","wLanguage","wShop","wEnglish","wAbout","wPost","wSearch","wDislike","wStatus","wHome","wImage","wReport","wHelp","wTest","wHistory","wSave","wLive","wDelete","wData","wLogin","wSubmit","wSettings","wPlaylists","wBlog","wMusic","wLike","wSaturday","wSunday","wMonday","wTuesday","wWednesday","wThursday","wFriday","wDownload","wUpload","wSend","wAddress","wLocation","wGame","wAudio","wCalculator","wComputer","wText","wUpdate","wSuccess","wInternet","wBkash","wNagad"];
-        
-        let lanStringObg = {"wLibrary":{"bn":" লাইব্রেরি","en":"Library"},"wData":{"bn":" ডেটা","en":"Data"},"wMonday":{"bn":" সোমবার","en":"Monday"},"wSave":{"bn":" সংরক্ষণ","en":"Save"},"wDownload":{"en":"Download","bn":" ডাউনলোড"},"wSettings":{"en":"Settings","bn":" সেটিংস"},"wSunday":{"bn":" রবিবার","en":"Sunday"},"wFriday":{"en":"Friday","bn":" শুক্রবার"},"wWarning":{"en":"Warning","bn":" সতর্কতা"},"wEnglish":{"bn":" ইংরেজি","en":"English"},"wSaturday":{"bn":" শনিবার","en":"Saturday"},"wDislike":{"en":"Dislike","bn":" অপছন্দ"},"wAbout":{"en":"About","bn":" সম্পর্কে"},"wSend":{"bn":" পাঠান","en":"Send"},"wShop":{"en":"Shop","bn":" শপ"},"wLive":{"bn":" লাইভ","en":"Live"},"wDelete":{"bn":" মুছে ফেলুন","en":"Delete"},"wVideos":{"en":"Videos","bn":" ভিডিও"},"wUpdate":{"en":"Update","bn":"আপডেট"},"wSubscribe":{"bn":" সাবস্ক্রাইব","en":"Subscribe"},"wReport":{"en":"Report","bn":" অভিযোগ"},"wContact":{"en":"Contact","bn":" কন্টাক্ট"},"wShorts":{"bn":" শর্টস","en":"Shorts"},"wBlog":{"bn":" ব্লগ","en":"Blog"},"wImage":{"bn":" ছবি","en":"Image"},"wHelp":{"en":"Help","bn":" সাহায্য"},"wLanguage":{"en":"Language","bn":" ভাষা"},"wBkash":{"en":"Bkash","bn":"বিকাশ"},"wAddress":{"bn":" ঠিকানা","en":"Address"},"wText":{"bn":"টেক্সট","en":"Text"},"wLocation":{"en":"Location","bn":" অবস্থান"},"wInternet":{"en":"Internet","bn":"ইন্টারনেট"},"wTest":{"en":"Test","bn":"Test"},"wSearch":{"bn":" অনুসন্ধান","en":"Search"},"wLike":{"en":"Like","bn":" পছন্দ"},"wNagad":{"en":"Nagad","bn":" নগদ"},"wHistory":{"bn":" ইতিহাস","en":"History"},"wMusic":{"en":"Music","bn":" সঙ্গীত"},"wForm":{"bn":"ফর্ম","en":"Form"},"wPost":{"bn":" পোস্ট","en":"Post"},"wUpload":{"bn":" আপলোড","en":"Upload"},"wWednesday":{"bn":" বুধবার","en":"Wednesday"},"wThursday":{"bn":" বৃহস্পতিবার","en":"Thursday"},"wHome":{"bn":"হোম","en":"Home"},"wGame":{"bn":" গেম","en":"Game"},"wPlaylists":{"en":"Playlists","bn":" প্লেলিস্ট"},"wComputer":{"bn":"কম্পিউটার","en":"Computer"},"wLogin":{"bn":" প্রবেশ করুন","en":"Login"},"wTuesday":{"en":"Tuesday","bn":" মঙ্গলবার"},"wSubmit":{"bn":" জমা","en":"Submit"},"wStatus":{"en":"Status","bn":" স্ট্যাটাস"},"wSuccess":{"en":"Success","bn":" সফল"},"wCalculator":{"en":"Calculator","bn":"ক্যালকুলেটর"},"wAudio":{"bn":" অডিও","en":"Audio"}};
-        
+        var keyArr=["wCalculator","wWednesday","wEnglish","wPlaylists","wWarning","wFriday","wSunday","wShorts","wData","wSaturday","wComputer","wDelete","wPost","wSave","wAudio","wLike","wAddress","wLocation","wAbout","wSuccess","wLive","wForm","wSubmit","wUpload","wMonday","wUpdate","wHelp","wReport","wNagad","wStatus","wContact","wVideos","wDislike","wThursday","wInternet","wClick","wSubscribe","wShop","wImage","wBkash","wMusic","wSearch","wLogin","wHistory","wGame","wSettings","wLanguage","wHome","wDownload","wText","wTest","wLibrary","wTuesday","wBlog","wSend","wGo"]; 
         let langObj=lanStringObg;
         const setLang = (key)=>{
             
@@ -895,5 +896,6 @@ function wStrtoQus(lang,x){
 
     w('.wTcenter').css({textAlign:'center'});
     
+
 
     
