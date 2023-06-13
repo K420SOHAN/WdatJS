@@ -797,11 +797,24 @@ function wStrtoQus(lang,x){
         const setLang = (key)=>{
             
             let mekeClass = '.'+key;
-            if(lang == 'en'){w(mekeClass).val(wObject(langObj).key(key)?.en);
-                wcolog(key);}
-            if(lang=='bn'){
-                
-                w(mekeClass).val(wObject(langObj).key(key)?.bn);
+            let selectClass = document.querySelectorAll(mekeClass);
+            
+            for(let c=0;c<selectClass.length;c++){
+                let nodeName = selectClass[c].nodeName;
+                if(lang == 'en'){
+                    if(nodeName=='INPUT'){
+                        selectClass[c].value = wObject(langObj).key(key)?.en;
+                    }else{
+                        selectClass[c].innerHTML = wObject(langObj).key(key)?.en;
+                    }
+                }
+                if(lang == 'bn'){
+                    if(nodeName=='INPUT'){
+                        selectClass[c].value = wObject(langObj).key(key)?.bn;
+                    }else{
+                        selectClass[c].innerHTML = wObject(langObj).key(key)?.bn;
+                    }
+                }
                 
             }
             
@@ -865,8 +878,10 @@ function wStrtoQus(lang,x){
 
             },
             useClass:()=>{
+                
                 for(i=0;i<keyArr.length;i++){
                     setLang(keyArr[i]);
+                    
                    }
                     
               
@@ -879,5 +894,6 @@ function wStrtoQus(lang,x){
     wStart('body');
 
     w('.wTcenter').css({textAlign:'center'});
+    
 
     
