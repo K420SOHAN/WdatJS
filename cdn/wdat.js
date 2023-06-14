@@ -318,6 +318,9 @@ const wObject = (obj)=>{
             
             let result = obj?.[fild];
         return result;
+        },
+        keys:()=>{
+           return Object.keys(obj);
         }
     }
   return Pr; 
@@ -708,51 +711,6 @@ function wTBabohar(DLang,s){
     }
    
 }
-function wTxtSClear(x,special){
-    function Oparation(data){
-    var fullstop = data.split('.').join('');
-    var comma = fullstop.split(',').join('');
-    var surPrize = comma.split('!').join('');
-    var slash = surPrize.split('/').join('');
-    var Backslash = slash.split('\\').join('');
-    if(special == ' '){var Space = Backslash.split('').join('');}else{var Space = Backslash.split(' ').join('');}
-    
-    var AtTheRate = Space.split('@').join('');
-    var Equal = AtTheRate.split('=').join('');
-    var Hyphen = Equal.split('-').join('');
-    var UnderScore = Hyphen.split('_').join('');
-    var SemeColon = UnderScore.split(';').join('');
-    var Colon = SemeColon.split(':').join('');
-    var Hash = Colon.split('#').join('');
-    var Dollar = Hash.split('$').join('');
-    var Quotation = Dollar.split('"').join('');
-    var SQusMark = Quotation.split("'").join('');
-    var FParentheses = SQusMark.split('(').join('');
-    var SParentheses = FParentheses.split(')').join('');
-    var Exclamation = SParentheses.split('!').join('');
-    var FSquareB = Exclamation.split('[').join('');
-    var SSquareB = FSquareB.split(']').join('');
-    var QusMark = SSquareB.split('?').join('');
-    return QusMark;
-    }
-    if(wDataDetect(x)== 'string'){
-        return Oparation(x);
-    }
-    if(wDataDetect(x)== 'array'){
-        const Result =[]
-        for(let i=0;i<x.length;i++){
-            Result.push(Oparation(x[i]));
-        }
-        return Result;
-    }
-
-    
-}
-function wStrtoQus(lang,x){
-   const t = x.replace('আমার','তোমার');
-   const t1 = t.replace('মন খারাপ','মন খারাপ কেন?');
-    return t1;
-}
 
 
   function wStart(){
@@ -784,8 +742,10 @@ function wStrtoQus(lang,x){
     
     /** Lang Data Object start */
     var lanStringObg = {"wStatus":{"en":"Status","bn":"স্ট্যাটাস"},"wData":{"bn":"ডেটা","en":"Data"},"wGo":{"en":"Go","bn":"যাও"},"wBlog":{"en":"Blog","bn":"ব্লগ"},"wPlaylists":{"bn":"প্লেলিস্ট","en":"Playlists"},"wClick":{"bn":"ক্লিক","en":"Click"},"wUpdate":{"bn":"আপডেট","en":"Update"},"wLike":{"en":"Like","bn":"পছন্দ"},"wHistory":{"en":"History","bn":"ইতিহাস"},"wHome":{"bn":"হোম","en":"Home"},"wSettings":{"bn":"সেটিংস","en":"Settings"},"wWarning":{"en":"Warning","bn":"সতর্কতা"},"wShop":{"en":"Shop","bn":"শপ"},"wSuccess":{"bn":"সফল","en":"Success"},"wSunday":{"en":"Sunday","bn":"রবিবার"},"wGame":{"bn":"গেম","en":"Game"},"wText":{"bn":"টেক্সট","en":"Text"},"wAddress":{"bn":"ঠিকানা","en":"Address"},"wWednesday":{"bn":"বুধবার","en":"Wednesday"},"wDownload":{"en":"Download","bn":"ডাউনলোড"},"wUpload":{"bn":"আপলোড","en":"Upload"},"wBkash":{"en":"Bkash","bn":"বিকাশ"},"wContact":{"en":"Contact","bn":"কন্টাক্ট"},"wAudio":{"en":"Audio","bn":"অডিও"},"wTuesday":{"bn":"মঙ্গলবার","en":"Tuesday"},"wSearch":{"en":"Search","bn":"অনুসন্ধান"},"wMonday":{"en":"Monday","bn":"সোমবার"},"wAbout":{"en":"About","bn":"সম্পর্কে"},"wMusic":{"en":"Music","bn":"সঙ্গীত"},"wSubscribe":{"en":"Subscribe","bn":" সাবস্ক্রাইব"},"wComputer":{"en":"Computer","bn":"কম্পিউটার"},"wTest":{"bn":"Test","en":"Test"},"wFriday":{"en":"Friday","bn":"শুক্রবার"},"wSave":{"en":"Save","bn":"সংরক্ষণ"},"wHelp":{"en":"Help","bn":"সাহায্য"},"wImage":{"bn":"ছবি","en":"Image"},"wLanguage":{"bn":"ভাষা","en":"Language"},"wLive":{"bn":"লাইভ","en":"Live"},"wNagad":{"bn":"নগদ","en":"Nagad"},"wDelete":{"bn":"মুছে ফেলুন","en":"Delete"},"wShorts":{"en":"Shorts","bn":"শর্টস"},"wForm":{"bn":"ফর্ম","en":"Form"},"wEnglish":{"en":"English","bn":"ইংরেজি"},"wThursday":{"en":"Thursday","bn":"বৃহস্পতিবার"},"wLogin":{"bn":"প্রবেশ করুন","en":"Login"},"wPost":{"bn":"পোস্ট","en":"Post"},"wInternet":{"bn":"ইন্টারনেট","en":"Internet"},"wDislike":{"en":"Dislike","bn":"অপছন্দ"},"wCalculator":{"en":"Calculator","bn":"ক্যালকুলেটর"},"wSend":{"en":"Send","bn":"পাঠান"},"wLocation":{"en":"Location","bn":"অবস্থান"},"wSaturday":{"en":"Saturday","bn":"শনিবার"},"wLibrary":{"en":"Library","bn":"লাইব্রেরি"},"wReport":{"en":"Report","bn":"অভিযোগ"},"wSubmit":{"bn":"জমা","en":"Submit"},"wVideos":{"en":"Videos","bn":"ভিডিও"}};
-        
+    
+    
     /** Lang Data Object End */
+    
     const webLang =(Lang,textType)=>{
         if(Lang == null){
             var lang ='en';
@@ -793,7 +753,7 @@ function wStrtoQus(lang,x){
             var lang = Lang.toLowerCase();
         }
         
-        var keyArr=["wCalculator","wWednesday","wEnglish","wPlaylists","wWarning","wFriday","wSunday","wShorts","wData","wSaturday","wComputer","wDelete","wPost","wSave","wAudio","wLike","wAddress","wLocation","wAbout","wSuccess","wLive","wForm","wSubmit","wUpload","wMonday","wUpdate","wHelp","wReport","wNagad","wStatus","wContact","wVideos","wDislike","wThursday","wInternet","wClick","wSubscribe","wShop","wImage","wBkash","wMusic","wSearch","wLogin","wHistory","wGame","wSettings","wLanguage","wHome","wDownload","wText","wTest","wLibrary","wTuesday","wBlog","wSend","wGo"]; 
+        var keyArr= wObject(lanStringObg).keys();
         let langObj=lanStringObg;
         const setLang = (key)=>{
             
@@ -821,6 +781,9 @@ function wStrtoQus(lang,x){
             
 }
         const f ={
+            add:(Newkey,keyObj)=>{
+                lanStringObg[Newkey] =keyObj;
+            },
             useKey:()=>{
                 function insert(data){
             
