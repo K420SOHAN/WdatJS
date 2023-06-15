@@ -4,13 +4,14 @@
 `$ npm i wdatjs`
 # ------------------------
 # --- wdatjs cdn link ---
-`https://unpkg.com/wdatjs@1.1.4/cdn/wdat.js`
+`https://unpkg.com/wdatjs@1.1.5/cdn/wdat.js`
 # ------------------------
 # !!! -- All Method List -- !!!
 # ----------------------------
 #### -- 1| webLang() => All Property --
 # ---------------
 1. webLang().add()
+1. webLang().update()
 2. webLang().useClass()
 # ----------------------------
 #### -- 2| Number() => All Property --
