@@ -14,7 +14,7 @@
 1. webLang().update()
 2. webLang().useClass()
 3. webLang().clickBtn() // #EnBtn , #BnBtn | 
-`Example :- <input id="EnBtn" type="Button"> , <input id="BnBtn" type="Button">`
+# `Example :- <input id="EnBtn" type="Button"> , <input id="BnBtn" type="Button">`
 # ----------------------------
 #### -- 2| Number() => All Property --
 # ---------------
