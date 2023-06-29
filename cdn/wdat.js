@@ -713,7 +713,7 @@ function wTBabohar(DLang,s){
 }
 
 
-  function wStart(){
+  function Start(){
    
     var obj={wTest:"Test",
              
@@ -730,8 +730,12 @@ function wTBabohar(DLang,s){
 };
     let f={
         run:(fun)=>{
+
             document.addEventListener("DOMContentLoaded", () => {
-                fun(obj);
+                setTimeout(()=>{
+                    fun(obj);
+                },0)
+                
                 })
         
         },
@@ -741,8 +745,9 @@ function wTBabohar(DLang,s){
 
     
     /** Lang Data Object start */
-    var lanStringObg = {"wRoom":{"en":"Room","bn":"রুম"},"wSpoon":{"bn":"চামচ","en":"Spoon"},"wLogIn":{"bn":"প্রবেশ করুন","en":"LogIn"},"wBkash":{"bn":"বিকাশ","en":"Bkash"},"wOrange":{"en":"Orange","bn":"কমলা"},"wPassport":{"en":"Passport","bn":"পাসপোর্ট"},"wGame":{"bn":"গেম","en":"Game"},"wText":{"bn":"টেক্সট","en":"Text"},"wMusic":{"en":"Music","bn":"সঙ্গীত"},"wJuly":{"bn":"জুলাই","en":"July"},"wWelcome":{"en":"Welcome","bn":"স্বাগতম"},"wGo":{"bn":"যাও","en":"Go"},"wLetter":{"bn":"পত্র","en":"Letter"},"wCalculator":{"bn":"ক্যালকুলেটর","en":"Calculator"},"wCountry":{"en":"Country","bn":"দেশ"},"wWednesday":{"en":"Wednesday","bn":"বুধবার"},"wHistory":{"bn":"ইতিহাস","en":"History"},"wNurse":{"bn":"সেবিকা","en":"Nurse"},"wUpload":{"en":"Upload","bn":"আপলোড"},"wDownload":{"bn":"ডাউনলোড","en":"Download"},"wSuccess":{"bn":"সফল","en":"Success"},"wSearch":{"en":"Search","bn":"অনুসন্ধান"},"wSubmit":{"en":"Submit","bn":"জমা"},"wVideos":{"en":"Videos","bn":"ভিডিও"},"wSend":{"bn":"পাঠান","en":"Send"},"wLanguage":{"bn":"ভাষা","en":"Language"},"wReport":{"bn":"অভিযোগ","en":"Report"},"wThursday":{"en":"Thursday","bn":"বৃহস্পতিবার"},"wPlaylists":{"en":"Playlists","bn":"প্লেলিস্ট"},"wShop":{"en":"Shop","bn":"শপ"},"wImage":{"bn":"ছবি","en":"Image"},"wBlog":{"en":"Blog","bn":"ব্লগ"},"wPassword":{"bn":"পাসওয়ার্ড","en":"Password"},"wAddress":{"en":"Address","bn":"ঠিকানা"},"wFood":{"bn":"খাবার","en":"Food"},"wStatus":{"bn":"স্ট্যাটাস","en":"Status"},"wMay":{"en":"May","bn":"মে"},"wOctober":{"en":"October","bn":"অক্টোবর"},"wLogin":{"en":"Login","bn":"প্রবেশ"},"wLocation":{"bn":"অবস্থান","en":"Location"},"wFacebook":{"bn":"ফেসবুক","en":"Facebook"},"wGoogle":{"bn":"গুগল","en":"Google"},"wBangla":{"en":"Bangla","bn":"বাংলা"},"wLive":{"bn":"লাইভ","en":"Live"},"wAugust":{"en":"August","bn":"আগস্ট"},"wSignup":{"bn":"নিবন্ধন","en":"Signup"},"wTuesday":{"bn":"মঙ্গলবার","en":"Tuesday"},"wDislike":{"bn":"অপছন্দ","en":"Dislike"},"wClothing":{"bn":"পোশাক","en":"Clothing"},"wDelete":{"bn":"মুছে ফেলুন","en":"Delete"},"wLogOut":{"en":"LogOut","bn":"প্রস্থান"},"wShorts":{"bn":"শর্টস","en":"Shorts"},"wNovember":{"bn":"নভেম্বর","en":"November"},"wHindi":{"en":"Hindi","bn":"হিন্দি"},"wDoctor":{"bn":"ডাক্তার","en":"Doctor"},"wEnglish":{"en":"English","bn":"ইংরেজি"},"wComputer":{"en":"Computer","bn":"কম্পিউটার"},"wFriday":{"en":"Friday","bn":"শুক্রবার"},"wE-mail":{"bn":"ই-মেইল","en":"E-mail"},"wTest":{"en":"Test","bn":"Test"},"wHome":{"en":"Home","bn":"হোম"},"wSave":{"bn":"সংরক্ষণ","en":"Save"},"wTraining":{"en":"Training","bn":"প্রশিক্ষণ"},"wChat":{"en":"Chat","bn":"চ্যাট"},"wSunday":{"en":"Sunday","bn":"রবিবার"},"wApril":{"en":"April","bn":"এপ্রিল"},"wSettings":{"bn":"সেটিংস","en":"Settings"},"wFebruary":{"bn":"ফেব্রুয়ারি","en":"February"},"wMarch":{"en":"March","bn":"মার্চ"},"wPost":{"en":"Post","bn":"পোস্ট"},"wBlood":{"bn":"রক্ত","en":"Blood"},"wClick":{"bn":"ক্লিক","en":"Click"},"wLibrary":{"bn":"লাইব্রেরি","en":"Library"},"wOffice":{"en":"Office","bn":"অফিস"},"wClinic":{"en":"Clinic","bn":"ক্লিনিক"},"wForm":{"bn":"ফর্ম","en":"Form"},"wChair":{"en":"Chair","bn":"চেয়ার"},"wLogout":{"bn":"প্রস্থান","en":"Logout"},"wTechnician":{"en":"Technician","bn":"টেকনিশয়ান"},"wknife":{"en":"knife","bn":"ছুরি"},"wWarning":{"bn":"সতর্কতা","en":"Warning"},"wYoutube":{"en":"Youtube","bn":"ইউটিউব"},"wAbout":{"bn":"সম্পর্কে","en":"About"},"wHelp":{"en":"Help","bn":"সাহায্য"},"wDecember":{"bn":"ডিসেম্বর","en":"December"},"wInternet":{"en":"Internet","bn":"ইন্টারনেট"},"wSignUp":{"en":"SignUp","bn":"নিবন্ধন করুন"},"wUpdate":{"bn":"আপডেট","en":"Update"},"wBread":{"bn":"রুটি","en":"Bread"},"wSaturday":{"bn":"শনিবার","en":"Saturday"},"wSubscribe":{"en":"Subscribe","bn":"সাবস্ক্রাইব"},"wLike":{"en":"Like","bn":"পছন্দ"},"wOil":{"bn":"তেল","en":"Oil"},"wNagad":{"en":"Nagad","bn":"নগদ"},"wContact":{"en":"Contact","bn":"কন্টাক্ট"},"wSeptember":{"en":"September","bn":"সেপ্টেম্বর"},"wAudio":{"en":"Audio","bn":"অডিও"},"wNewspaper":{"en":"Newspaper","bn":"সংবাদপত্র"},"wJanuary":{"bn":"জানুয়ারি","en":"January"},"wJune":{"bn":"জুন","en":"June"},"wEmail":{"en":"Email","bn":"ইমেইল"},"wData":{"bn":"ডেটা","en":"Data"},"wMilk":{"en":"Milk","bn":"দুধ"},"wLaboratory":{"en":"Laboratory","bn":"ল্যাবরেটরি"},"wMonday":{"en":"Monday","bn":"সোমবার"},"wMenu":{"en":"Menu","bn":"মেনু"}};
+    var lanStringObg = {"wTitle":{"en":"Title","bn":"শিরোনাম"},"wApril":{"bn":"এপ্রিল","en":"April"},"wStatus":{"en":"Status","bn":"স্ট্যাটাস"},"wBread":{"en":"Bread","bn":"রুটি"},"wWednesday":{"en":"Wednesday","bn":"বুধবার"},"wCountry":{"en":"Country","bn":"দেশ"},"wMusic":{"en":"Music","bn":"সঙ্গীত"},"wDownload":{"en":"Download","bn":"ডাউনলোড"},"wStart":{"en":"Start","bn":"শুরু"},"wTuesday":{"bn":"মঙ্গলবার","en":"Tuesday"},"wBlog":{"en":"Blog","bn":"ব্লগ"},"wImage":{"en":"Image","bn":"ছবি"},"wWebsite":{"en":"Website","bn":"ওয়েবসাইট"},"wLetter":{"bn":"পত্র","en":"Letter"},"wPackage":{"en":"Package","bn":"প্যাকেজ"},"wCart":{"bn":"কার্ট","en":"Cart"},"wSend":{"bn":"পাঠান","en":"Send"},"wMilk":{"bn":"দুধ","en":"Milk"},"wCategory":{"bn":"ক্যাটাগরি","en":"Category"},"wLogin":{"bn":"প্রবেশ","en":"Login"},"wAndroid":{"en":"Android","bn":"অ্যান্ড্রয়েড"},"wPassword":{"en":"Password","bn":"পাসওয়ার্ড"},"wFacebook":{"en":"Facebook","bn":"ফেসবুক"},"wMenu":{"en":"Menu","bn":"মেনু"},"wDelete":{"bn":"মুছে ফেলুন","en":"Delete"},"wRocket":{"en":"Rocket","bn":"রকেট"},"wApp":{"bn":"অ্যাপ","en":"App"},"wSuccess":{"bn":"সফল","en":"Success"},"wOctober":{"bn":"অক্টোবর","en":"October"},"wShorts":{"en":"Shorts","bn":"শর্টস"},"wGmail":{"en":"Gmail","bn":"জিমেইল"},"wInternet":{"en":"Internet","bn":"ইন্টারনেট"},"wPost":{"bn":"পোস্ট","en":"Post"},"wUpload":{"en":"Upload","bn":"আপলোড"},"wE-mail":{"en":"E-mail","bn":"ই-মেইল"},"wJanuary":{"en":"January","bn":"জানুয়ারি"},"wHindi":{"bn":"হিন্দি","en":"Hindi"},"wMonday":{"en":"Monday","bn":"সোমবার"},"wYoutube":{"bn":"ইউটিউব","en":"Youtube"},"wSeptember":{"bn":"সেপ্টেম্বর","en":"September"},"wGame":{"en":"Game","bn":"গেম"},"wLogOut":{"en":"LogOut","bn":"প্রস্থান"},"wLogout":{"bn":"প্রস্থান","en":"Logout"},"wWelcome":{"en":"Welcome","bn":"স্বাগতম"},"wNew":{"bn":"নতুন","en":"New"},"wFood":{"bn":"খাবার","en":"Food"},"wSettings":{"en":"Settings","bn":"সেটিংস"},"wNagad":{"en":"Nagad","bn":"নগদ"},"wClothing":{"bn":"পোশাক","en":"Clothing"},"wThursday":{"en":"Thursday","bn":"বৃহস্পতিবার"},"wHome":{"en":"Home","bn":"হোম"},"wLanguage":{"bn":"ভাষা","en":"Language"},"wAbout":{"en":"About","bn":"সম্পর্কে"},"wNovember":{"en":"November","bn":"নভেম্বর"},"wContact":{"en":"Contact","bn":"কন্টাক্ট"},"wOffice":{"en":"Office","bn":"অফিস"},"wLogIn":{"en":"LogIn","bn":"প্রবেশ করুন"},"wForm":{"en":"Form","bn":"ফর্ম"},"wSoftware":{"bn":"সফটওয়্যার","en":"Software"},"wDoctor":{"bn":"ডাক্তার","en":"Doctor"},"wClinic":{"en":"Clinic","bn":"ক্লিনিক"},"wPayment":{"en":"Payment","bn":"পেমেন্ট"},"wShop":{"bn":"শপ","en":"Shop"},"wBkash":{"en":"Bkash","bn":"বিকাশ"},"wReport":{"en":"Report","bn":"অভিযোগ"},"wSignup":{"en":"Signup","bn":"নিবন্ধন"},"wMarch":{"en":"March","bn":"মার্চ"},"wNurse":{"en":"Nurse","bn":"সেবিকা"},"wSaturday":{"en":"Saturday","bn":"শনিবার"},"wPassport":{"en":"Passport","bn":"পাসপোর্ট"},"wMobile":{"en":"Mobile","bn":"মোবাইল"},"wVideos":{"en":"Videos","bn":"ভিডিও"},"wLaboratory":{"bn":"ল্যাবরেটরি","en":"Laboratory"},"wDislike":{"en":"Dislike","bn":"অপছন্দ"},"wInstall":{"en":"Install","bn":"ইনস্টল"},"wTechnician":{"en":"Technician","bn":"টেকনিশয়ান"},"wFebruary":{"bn":"ফেব্রুয়ারি","en":"February"},"wDecember":{"bn":"ডিসেম্বর","en":"December"},"wSubmit":{"bn":"জমা","en":"Submit"},"wData":{"bn":"ডেটা","en":"Data"},"wChat":{"bn":"চ্যাট","en":"Chat"},"wProfile":{"en":"Profile","bn":"প্রোফাইল"},"wLocation":{"bn":"অবস্থান","en":"Location"},"wPage":{"bn":"পাতা","en":"Page"},"wSpoon":{"en":"Spoon","bn":"চামচ"},"wOrder":{"bn":"অর্ডার","en":"Order"},"wPhone":{"bn":"ফোন","en":"Phone"},"wSunday":{"en":"Sunday","bn":"রবিবার"},"wAugust":{"bn":"আগস্ট","en":"August"},"wNewspaper":{"en":"Newspaper","bn":"সংবাদপত্র"},"wChair":{"en":"Chair","bn":"চেয়ার"},"wTest":{"en":"Test","bn":"Test"},"wRoom":{"en":"Room","bn":"রুম"},"wEnglish":{"bn":"ইংরেজি","en":"English"},"wCalculator":{"bn":"ক্যালকুলেটর","en":"Calculator"},"wWarning":{"en":"Warning","bn":"সতর্কতা"},"wFriday":{"bn":"শুক্রবার","en":"Friday"},"wJune":{"bn":"জুন","en":"June"},"wGo":{"en":"Go","bn":"যাও"},"wLibrary":{"en":"Library","bn":"লাইব্রেরি"},"wAddress":{"en":"Address","bn":"ঠিকানা"},"wLive":{"bn":"লাইভ","en":"Live"},"wText":{"en":"Text","bn":"টেক্সট"},"wHistory":{"en":"History","bn":"ইতিহাস"},"wUpdate":{"en":"Update","bn":"আপডেট"},"wBangla":{"bn":"বাংলা","en":"Bangla"},"wHelp":{"en":"Help","bn":"সাহায্য"},"wComputer":{"en":"Computer","bn":"কম্পিউটার"},"wEmail":{"bn":"ইমেইল","en":"Email"},"wPlaylists":{"bn":"প্লেলিস্ট","en":"Playlists"},"wGoogle":{"bn":"গুগল","en":"Google"},"wBlood":{"bn":"রক্ত","en":"Blood"},"wSave":{"bn":"সংরক্ষণ","en":"Save"},"wNumber":{"bn":"নাম্বার","en":"Number"},"wOrange":{"bn":"কমলা","en":"Orange"},"wSearch":{"bn":"অনুসন্ধান","en":"Search"},"wClick":{"bn":"ক্লিক","en":"Click"},"wBook":{"bn":"বই","en":"Book"},"wKnife":{"bn":"ছুরি","en":"Knife"},"wSignUp":{"en":"SignUp","bn":"নিবন্ধন করুন"},"wMay":{"bn":"মে","en":"May"},"wAudio":{"bn":"অডিও","en":"Audio"},"wPrice":{"bn":"মূল্য","en":"Price"},"wSubscribe":{"bn":"সাবস্ক্রাইব","en":"Subscribe"},"wTraining":{"bn":"প্রশিক্ষণ","en":"Training"},"wOil":{"en":"Oil","bn":"তেল"},"wLike":{"en":"Like","bn":"পছন্দ"},"wJuly":{"en":"July","bn":"জুলাই"}};
     /** Lang Data Object End */
+
     
     const webLang =(Lang,textType)=>{
         if(Lang == null){
@@ -779,6 +784,7 @@ function wTBabohar(DLang,s){
             
 }
         const f ={
+
             add:(Newkey,keyObj)=>{
                 lanStringObg[Newkey] =keyObj;
             },
@@ -810,36 +816,7 @@ function wTBabohar(DLang,s){
                    for(i=0;i<keyArr.length;i++){
                     insert(keyArr[i]);
                    }
-                    // insert('wAbout');
-                    // insert('wBlog');
-                    // insert('wContact');
-                    // insert('wEnglish');
-                    // insert('wHome');
-                    // insert('wMenu','Menu');
-                    // insert('wShop','Shop');
-                    // insert('wStatus','Status');
                     
-                
-                // if(lang =='bn'){
-                //     insert('wAbout','সম্পর্কে');
-                //     insert('wBlog','ব্লগ');
-                //     insert('wContact','কন্টাক্ট');
-                //     insert('wEnglish','ইংরেজি');
-                //     insert('wHome','হোম');
-                //     // insert('wMenu','মেনু');
-                //     // insert('wShop','শপ');
-                //     // insert('wStatus','স্ট্যাটাস');
-                // }
-                // if(lang =='purebn' || lang =='pbn'){
-                //     insert('wAbout','সম্পর্কে');
-                //     insert('wBlog','ব্লগ');
-                //     insert('wContact','যোগাযোগ');
-                //     insert('wEnglish','ইংরেজি');
-                //     insert('wHome','বাড়ি');
-                //     insert('wMenu','তালিকা');
-                //     insert('wShop','দোকান');
-                //     insert('wStatus','স্ট্যাটাস');
-                // }
 
             },
             useClass:()=>{
@@ -868,10 +845,203 @@ function wTBabohar(DLang,s){
         return f;
         
       }
-    wStart('body');
+    Start('body');
 
     w('.wTcenter').css({textAlign:'center'});
+
+//     const wFonta = (fun)=>{
+        
+//         var element = fun().element;
+//         var id = fun().id;
+//         var select = document.getElementById(fun().id);
+//         for(x in element){
+//             for(c in element[x]){
+//                const val= element[x][c]
+//                const nodeName = c;
+//                const cre = document.createElement(c)
+//                cre.innerHTML = val;
+//                document.getElementById(id).appendChild(cre)
+//             };
+//         }
+//     }
+   
+//    wFonta((e)=>{
     
+//      const h1 = {a,b};
+        
+//         var m={
+//             id:'root',
+//             element:[{h1:'hello'},{a:"hi"}],
+//         };
+//         m.x = 'Hello';
+//         return m;
+
+//    })
 
 
+
+
+
+
+const exports={};
+// style converter
+function obtostr (obj){
+    var style ='';
+for(x in obj){
+style +=`${x}:${obj[x]}`;
+style += ';';
+};
+var ReBGColor = style.replaceAll('backgroundColor','background-color');
+return ReBGColor;
+}
+// style converter
+const wAttrMake=(attr)=>{
+    var allmixed ='';
+        for(x in attr){
+           const Attrbute = x;
+           const AttrValue = attr[x];
+           const mixed = `${Attrbute}="${AttrValue}"`;
+           allmixed +=mixed+' ';
+        };
+        return allmixed;
+};
+
+// Make a Tag
+// Make a Tag
+const on = (e,fun)=>{
+    wcolog(fun());
+}
+const wDoubleTag=(tagName,s,attr,fun)=>{
+    if(attr){
+        if(fun){
+            return `<${tagName} onclick="${on('click','ggddd')}" ${wAttrMake(attr)}>${s}</${tagName}>`;
+        }else{
+            return `<${tagName} ${wAttrMake(attr)}>${s}</${tagName}>`;
+        }
+     
+        
+    }else{
+        return `<${tagName}>${s}</${tagName}>`;
+    }
+};
+const wSingleTag =(tagName,attr)=>{
+    if(attr){
+        return `<${tagName} ${wAttrMake(attr)}/>`
+    }else{
+        return `<${tagName}/>`
+    }};
+
+const img=(attr)=>{return wSingleTag('img',attr);};
+const input=(attr)=>{return wSingleTag('input',attr);};
+const br=(attr)=>{return wSingleTag('br',attr);};
+const base=(attr)=>{return wSingleTag('base',attr);};
+const hr=(attr)=>{return wSingleTag('hr',attr);};
+const area=(attr)=>{return wSingleTag('area',attr);};
+const source=(attr)=>{return wSingleTag('source',attr);};
+
+const title=(s,attr)=>{return wDoubleTag('title',s,attr);};
+const div=(s,attr)=>{return wDoubleTag('div',s,attr);};
+const a=(s,attr,fun)=>{return wDoubleTag('a',s,attr,fun);};
+const abbr=(s,attr,fun)=>{return wDoubleTag('abbr',s,attr,fun);};
+const address=(s,attr,fun)=>{return wDoubleTag('address',s,attr,fun);};
+const audio=(s,attr,fun)=>{return wDoubleTag('audio',s,attr,fun);};
+const article=(s,attr,fun)=>{return wDoubleTag('article',s,attr,fun);};
+const aside=(s,attr,fun)=>{return wDoubleTag('aside',s,attr,fun);};
+const b=(s,attr,fun)=>{return wDoubleTag('b',s,attr,fun);};
+const code=(s,attr,fun)=>{return wDoubleTag('code',s,attr,fun);};
+const i=(s,attr,fun)=>{return wDoubleTag('i',s,attr,fun);};
+const p=(s,attr)=>{return wDoubleTag('p',s,attr);};
+const ul=(s,attr)=>{return wDoubleTag('ul',s,attr);};
+const ol=(s,attr)=>{return wDoubleTag('ol',s,attr);};
+const li=(s,attr)=>{return wDoubleTag('li',s,attr);};
+const h1=(s,attr)=>{return wDoubleTag('h1',s,attr);};
+const h2=(s,attr)=>{return wDoubleTag('h2',s,attr);};
+const h3=(s,attr)=>{return wDoubleTag('h3',s,attr);};
+const h4=(s,attr)=>{return wDoubleTag('h4',s,attr);};
+const h5=(s,attr)=>{return wDoubleTag('h5',s,attr);};
+const h6=(s,attr)=>{return wDoubleTag('h6',s,attr);};
+// Make a Tag
+// Make a Tag
+
+
+ const App = (fun)=>{
+    var Ob = {
+        root: (id)=>{
+            setTimeout(() => {
+               
+                return document.getElementById(id).innerHTML = fun;
+                },0)
+           
+        
+        }
+        ,
+        head:(head)=>{
+            
+                return document.head.innerHTML += fun2;
+                
+        },
+        title:(val)=>{
+            document.getElementById('title').innerHTML = val;
+        }
+    };
+    return Ob ;
+};
+const wStyle={
+    create:(obj)=>{
+       setTimeout(()=>{
+        for(x in obj ){
+            for(Sproperty in obj[x]){
+                const StyleProperty = Sproperty;
+               const StyleValue = obj[x][Sproperty];
+               const AllSelect = document.querySelectorAll('.'+x);
+               for(let allC =0; allC< AllSelect.length;allC++){
+                AllSelect[allC].style[StyleProperty] = StyleValue;
+               }
+                
+            };
+            
+        }
+       },1)
+    },
+    link:(href)=>{
+        window.onbeforeunload =()=>
+        {var element = document.createElement("link");
+        element.rel = 'stylesheet';
+
+       if(href.search('http')==0){
+        
+        
+        element.href =`${href}`;
+        document.querySelector('head').appendChild(element);
+       }else{
+            const hostPath = window?.location?.origin;
+            element.href =`${hostPath}/${href}`;
+        
+        document.querySelector('head').appendChild(element);}}
+        window.onbeforeunload();
+        wcolog('css');
+    }
+};
+Window.prototype.wImport =(href)=>{
+    wcolog(href)
+    const scriptSrc = `<script type="text/javascript" src="${href}"></script>`
+    document.querySelector('body').innerHTML = scriptSrc;
+}
+
+const create={};
+create.menu = (obj)=>{
+    const f ={};
+    for(x in obj){
+        f[x] = li(a(x,obj[x]));
+     }
+     var funrr='';
     
+        
+        for(inc in f){
+            funrr += f[inc];
+        }
+        
+        
+    
+    return div(ul(funrr),{class:'CrMenu'});
+}
